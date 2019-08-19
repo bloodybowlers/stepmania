@@ -21,9 +21,10 @@ void GameplayAssist::PlayTicks( const NoteData &nd, const PlayerState *ps )
 	if( !bClap  &&  !bMetronome )
 		return;
 
+	// we WANT clap sounds for dead players :)
 	// don't play sounds for dead players
-	if( ps->m_HealthState == HealthState_Dead )
-		return;
+	//if( ps->m_HealthState == HealthState_Dead )
+	//	return;
 
 	/* Sound cards have a latency between when a sample is Play()ed and when the sound
 	 * will start coming out the speaker.  Compensate for this by boosting fPositionSeconds
